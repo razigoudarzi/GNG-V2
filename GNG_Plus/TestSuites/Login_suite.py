@@ -23,6 +23,7 @@ class Login_Test_Suite(unittest.TestCase):
         sleep(3)
         assert self.driver.current_url == url
         #self.driver.quit()
+        #self.driver.close()
 
 # تست کیس مربوط به لاگین ناموفق
     def test3_unsucces_login(self):
@@ -34,6 +35,7 @@ class Login_Test_Suite(unittest.TestCase):
         sleep(2)
         self.driver.find_element(By.CSS_SELECTOR, dialog_box_css_selector)
         #self.driver.quit()
+        #self.driver.close()
 
 #تست کیس مربوط به فیلدهای اجباری
     def test2_required_fields(self):
@@ -77,6 +79,7 @@ class Login_Test_Suite(unittest.TestCase):
         print(self.driver.find_element(By.CSS_SELECTOR, party_title).get_attribute('aria-invalid'))
         assert (self.driver.find_element(By.CSS_SELECTOR, party_title)).get_attribute('aria-invalid') == 'true'
         #self.driver.quit()
+        #self.driver.close()
 
     @classmethod
     def tearDownClass(cls):

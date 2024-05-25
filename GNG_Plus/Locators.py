@@ -23,3 +23,11 @@ party3_Css_Selector = "input[name= 'partyThreeName']"
 ignore_button_xpath = "//div[@aria-label= 'انصراف'][1]"
 edit_button_xpath = "//div[@role = 'option'][1]"
 
+
+#Disabled_field
+request_xpath= "(//li[@aria-label= 'اعلام نياز'])[1]"
+actions_xpath ="//li[@aria-label = 'اقدامات']"
+request_xpath2 = "(//li[@aria-label = 'اعلام نياز'])[2]"
+search_button = "//dx-button[@aria-label= 'جستجو']"
+request_type_drop_down_xpath = "//dx-drop-down-box[@ng-reflect-label='نوع اعلام نیاز']"
+check_box_xpath = "(//*[@class='dx-checkbox-container'])[2]"

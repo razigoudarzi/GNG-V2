@@ -16,6 +16,7 @@ details = Detials(driver = driver)
 
 #لود آدرس سیستم اعلام نیاز
 driver.get("http://172.31.0.156:5529/")
+#sleep(15)
 driver.implicitly_wait(5)
 driver.maximize_window()
 

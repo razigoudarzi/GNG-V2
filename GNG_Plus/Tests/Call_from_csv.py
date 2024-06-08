@@ -5,6 +5,8 @@ from time import sleep
 from selenium.webdriver.common.by import By
 import os
 
+
+
 #در اولین مرحله csv را ایمپورت می کنیم.
 import csv
 

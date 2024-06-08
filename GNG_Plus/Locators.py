@@ -50,3 +50,8 @@ select_request_xpath2 = "(//div[@aria-label='انتخاب ردیف'])[11]"
 unit_xpath = "//dx-drop-down-box[@ng-reflect-label = 'واحد']"
 select_request_xpath3= "(//div[@aria-label='انتخاب ردیف'])[12]"
 save_button_xpath = "//div[@aria-label= 'ثبت']"
+
+#Filters
+#بازنشانی فیلتر
+refresh_field_xpath = "//dx-button[@aria-label = 'بازنشانی فیلتر']"
+request_type_drop_down_xpath = "//dx-drop-down-box[@ng-reflect-label='نوع اعلام نیاز']"

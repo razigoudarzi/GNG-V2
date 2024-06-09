@@ -58,3 +58,7 @@ request_type_drop_down_xpath = "//dx-drop-down-box[@ng-reflect-label='نوع ا�
 
 #Search
 search_input_css_selector = "input[aria-label='جستجو در گرید']"
+
+
+#sort
+column_id_xpath = "(//td[@aria-label = 'ستون شناسه'])[1]"

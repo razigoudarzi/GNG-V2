@@ -62,3 +62,8 @@ search_input_css_selector = "input[aria-label='جستجو در گرید']"
 
 #sort
 column_id_xpath = "(//td[@aria-label = 'ستون شناسه'])[1]"
+
+
+#Logout
+user_icone_xpath = "//div[@role = 'button' and @title = 'امکانات کاربر']"
+logout_icon_xpath  = "//span[text() ='خروج']"

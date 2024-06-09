@@ -55,3 +55,6 @@ save_button_xpath = "//div[@aria-label= 'ثبت']"
 #بازنشانی فیلتر
 refresh_field_xpath = "//dx-button[@aria-label = 'بازنشانی فیلتر']"
 request_type_drop_down_xpath = "//dx-drop-down-box[@ng-reflect-label='نوع اعلام نیاز']"
+
+#Search
+search_input_css_selector = "input[aria-label='جستجو در گرید']"

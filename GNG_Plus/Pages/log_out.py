@@ -9,7 +9,7 @@ class Logout():
     def logout(self):
         #کلیک روی آیکون امکانات کاربر
         self.driver.find_element(By.XPATH,user_icone_xpath).click()
-        #کلیک روی آیکون خرج
+        #کلیک روی آیکون خروج
         self.driver.find_element(By.XPATH,logout_icon_xpath).click()
 
 

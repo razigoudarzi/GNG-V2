@@ -67,3 +67,21 @@ column_id_xpath = "(//td[@aria-label = 'ستون شناسه'])[1]"
 #Logout
 user_icone_xpath = "//div[@role = 'button' and @title = 'امکانات کاربر']"
 logout_icon_xpath  = "//span[text() ='خروج']"
+
+#checkBox_request
+#چک باکس طرف حساب اول در فرم انواع اعلام نیاز
+party_checkbox1_xpath = "(//dx-check-box[@role = 'checkbox'])[1]"
+#چک باکس طرف حساب دوم در فرم اعلام نیاز
+party_checkbox2_xpath = "(//dx-check-box[@role = 'checkbox'])[2]"
+
+#دکمه ی افزودن
+insert_button_xpath = "(//div[@aria-label= 'افزودن'])[1]"
+party1_name_css_Selector ="input[name = 'partyOneName']"
+party2_switch_on_xpath = "(//div[@class='dx-switch-on'])[2]"
+party2_name_xpath = "//input[@name = 'partyTwoName']"
+
+check_box_party1_selected = "(//dx-check-box)[1]"
+check_box_party2_selected = '(//dx-check-box)[2]'
+check_box_party3_selected = '(//dx-check-box)[3]'
+
+

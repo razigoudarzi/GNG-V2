@@ -15,9 +15,11 @@ class Search():
         #استفاده از کلاس Enter جهت نمایش خروجی
         self.driver.find_element(By.CSS_SELECTOR,search_input_css_selector).send_keys(Keys.ENTER)
 
-        sleep(2)
+        sleep(1)
     # اسرشن رکورد خروجی با تکست سرچ شده
-        assert(self.driver.find_element(By.CSS_SELECTOR,".dx-datagrid-search-text").text)==text
+        #print(self.driver.find_element(By.CSS_SELECTOR,".dx-datagrid-search-text").text)
+        assert(self.driver.find_element(By.XPATH,target_field_xpath).text)==text
+
 
 
 

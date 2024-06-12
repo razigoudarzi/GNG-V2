@@ -1,5 +1,5 @@
 
-#تست کیس مربوط به فعال و غیرفعال شدن یک فیلد در شرایط خاص
+#تست کیس مربوط به فعال و غیرفعال شدن یک فیلد در شرایط خاص ( فیلد جستجو در فرم اعلام نیاز)
 from selenium import webdriver
 from Pages.Login import Login_Page
 from Locators import *

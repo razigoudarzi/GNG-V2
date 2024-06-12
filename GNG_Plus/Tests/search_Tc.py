@@ -28,8 +28,4 @@ search_object = Search(driver = driver)
 #فراخوانی متد search از کلاس Search
 search_object.search('Goudarzi')
 
-
-
-
-
 sleep(5)

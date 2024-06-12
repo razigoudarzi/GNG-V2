@@ -1,4 +1,4 @@
-from selenium import webdriver
+
 from Locators import *
 from selenium.webdriver.common.by import By
 

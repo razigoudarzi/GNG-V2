@@ -11,6 +11,7 @@ driver = webdriver.Chrome()
 #ساخت یک object از کلاس Login_page
 login_object = Login_Page(driver = driver)
 
+sleep(10 )
 #ساخت یک object از کلاس Details
 details = Detials(driver = driver)
 

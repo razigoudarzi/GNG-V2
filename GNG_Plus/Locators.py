@@ -15,9 +15,10 @@ dialog_box_css_selector = "div.dx-dialog-message"
 
 #required_fields_Tc  - فرم انواع اعلام نیاز
 #پنل اعلام نیاز
-request_title_link = "li[aria-label= 'اعلام نياز']"
+request_title_link = "li[aria-label='اعلام نیاز']"
 #منوی تنظیمات
-setting_link = "li[aria-label= 'تنظيمات']"
+setting_link = "li[aria-label = 'تنظیمات']"
+
 #منوی انواع اعلام نیاز
 request_types = "li[aria-label='انواع اعلام نياز']"
 #دکمه ی افزودن

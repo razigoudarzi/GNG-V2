@@ -7,6 +7,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.action_chains import ActionChains
 
 
 
@@ -23,17 +24,20 @@ class Adding_job :
         self.driver.find_element(By.CSS_SELECTOR,personnel_link_css_selector).click()  #کلیک روی لینک پرسنلی
         self.driver.find_element(By.CSS_SELECTOR,jobs_info_css_selector).click()      #کلیک روی اطلاعات پایه مشاغل
         self.driver.find_element(By.CSS_SELECTOR,job_css_selctor).click()           #کلیک روی شغل
-        time.sleep(5)
-        self.driver.find_element(By.XPATH,plus_button).click()              #کلیک روی افزودن
-        time.sleep(2)
+
+
+        self.driver.find_element(By.XPATH,plus_button).click()
+
+        time.sleep(1)
 
        #فیلد کد شغل
         self.driver.find_element(By.CSS_SELECTOR,job_code).send_keys(job_number)
        #فیلد عنوان شغل
+
         self.driver.find_element(By.CSS_SELECTOR,job_name).send_keys(job_title)
         #رسته شغلی
         self.driver.find_element(By.XPATH,job_drop_down).click()
-        time.sleep(1)
+        #time.sleep(1)
 
         self.driver.find_element(By.XPATH,Job_type).click()
         #time.sleep(1)
@@ -75,23 +79,33 @@ class Adding_job :
         # زدن کلید Enter برای سرچ
         filter_input.send_keys(Keys.ENTER)
 
-        # --- مرحله 2: کلیک روی آیکون سطل زباله ---
-       # delete_button = self.wait.until(
-          #  EC.element_to_be_clickable(
-          #      (By.XPATH, "(//div[@role='button' and .//i[contains(@class, 'dx-icon-overflow')]])[1]"))
-
-       # )
-        time.sleep(2)
-        self.driver.find_element(By.XPATH,"(//div[@role='button' and .//i[contains(@class, 'dx-icon-overflow')]])[1]").click()
         time.sleep(1)
-        self.driver.find_element(By.XPATH,"//div[@role='option' and contains(., 'حذف')]").click()
-        #delete_button.click()
-        #time.sleep(3)
+
+
+        actions = ActionChains(self.driver)
+        delete_button = self.driver.find_element(By.XPATH,"//tr[td[normalize-space()='140429']]//a[@aria-label='حذف']")
+
         # --- مرحله 3: تأیید حذف ---
+        actions.move_to_element(delete_button).click().perform()
+
         confirm_btn = self.wait.until(
             EC.element_to_be_clickable((By.CSS_SELECTOR, confirm_button))
         )
         confirm_btn.click()
+
+        # پاک کردن فیلد فیلتر قبلی
+        filter_input.clear()
+        time.sleep(1)
+        # وارد کردن کد شغل
+        filter_input.send_keys(code)
+
+        # زدن کلید Enter برای سرچ
+        filter_input.send_keys(Keys.ENTER)
+
+        no_data_element = WebDriverWait(self.driver, 10).until(
+            EC.visibility_of_element_located((By.CLASS_NAME, "dx-datagrid-nodata"))
+        )
+        assert no_data_element.is_displayed()
 
 
 
